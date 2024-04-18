@@ -20,4 +20,4 @@ categoryScheam.statics.isCategoryExists = async function (name: string) {
 }
 
 
-export const Category = model<TCategory>('Category', categoryScheam)
+export const Category = model<TCategory, CategoryModel>('Category', categoryScheam)

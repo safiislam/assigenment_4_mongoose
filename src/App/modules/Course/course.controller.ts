@@ -1,5 +1,5 @@
-import { catchAsync } from "../utils/catchAsync";
-import { sendResponse } from "../utils/sendResponse";
+import { catchAsync } from "../../utils/catchAsync";
+import { sendResponse } from "../../utils/sendResponse";
 import { CourseServices } from "./course.service";
 
 
