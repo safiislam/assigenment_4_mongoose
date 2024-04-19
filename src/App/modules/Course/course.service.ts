@@ -214,11 +214,19 @@ const getBestCourseFromDB = async () => {
     return result
 
 }
+const getSingleCourseFromDB = async (id: string) => {
+    const result = await Course.findById(id)
+    // if (!result) {
+    //     throw new Error('This user is not exist')
+    // }
+    return result
+}
 
 export const CourseServices = {
     createCourseIntoDB,
     getAllCourseFromDB,
     updateCosurseFromBD,
     getCourseReviewFromDB,
-    getBestCourseFromDB
+    getBestCourseFromDB,
+    getSingleCourseFromDB
 }

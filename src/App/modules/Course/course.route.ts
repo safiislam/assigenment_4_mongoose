@@ -10,9 +10,10 @@ import { CourseValidations } from "./course.validation";
 const router = Router()
 
 router.post('/create-course',
-    validationRequest(CourseValidations.createCourseValidationSchema),
+    // validationRequest(CourseValidations.createCourseValidationSchema),
     CourseControllers.createCourse)
 router.get('/', CourseControllers.getAllCourse)
+router.get('/:id', CourseControllers.getSingleCourse)
 router.get('/:courseId/reviews', CourseControllers.getCourseReview)
 router.get('/best', CourseControllers.getBestCourse)
 router.patch('/courseId', validationRequest(CourseValidations.updateCourseValidationSchema), CourseControllers.updateCosurse)
